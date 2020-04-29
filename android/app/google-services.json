@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "35185599026",
+    "firebase_url": "https://whatsappclonefirebase-89735.firebaseio.com",
+    "project_id": "whatsappclonefirebase-89735",
+    "storage_bucket": "whatsappclonefirebase-89735.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35185599026:android:853df2beec0efad77e122b",
+        "android_client_info": {
+          "package_name": "com.challenge.hundreddaysflutterchallenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "35185599026-44liu0ti39h2mnc9gp64pkqnrrn89u71.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFrAE-bKyYZI8JvM52dznQ84hOw6f0SPE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "35185599026-44liu0ti39h2mnc9gp64pkqnrrn89u71.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

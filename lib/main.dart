@@ -11,18 +11,18 @@ class HomeConfig extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.green,
-        accentColor: Colors.lightGreen,
-        textTheme: TextTheme(
-          title: TextStyle(
-            color: Colors.white,
-            fontSize: 18,
-          ),
-        )
-      ),
+          primarySwatch: Colors.green,
+          accentColor: Colors.lightGreen,
+          textTheme: TextTheme(
+            title: TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+            ),
+          )),
       initialRoute: '/',
       routes: {
         '/': (ctx) => AuthScreen(),
+        HomeScreen.routeArgs: (ctx) => HomeScreen(),
 //        AuthScreen.auth_route_args: (ctx) => AuthScreen(),
       },
     );
