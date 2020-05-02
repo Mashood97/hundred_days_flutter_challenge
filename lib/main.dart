@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hundreddaysflutterchallenge/screens/auth_screen.dart';
+import './screens/auth_screen.dart';
+import './screens/verify_number_screen.dart';
 import './screens/home_screen.dart';
 
 void main() {
@@ -23,6 +24,7 @@ class HomeConfig extends StatelessWidget {
       routes: {
         '/': (ctx) => AuthScreen(),
         HomeScreen.routeArgs: (ctx) => HomeScreen(),
+        VerifyPhoneNumber.routeArgs: (ctx) => VerifyPhoneNumber(),
 //        AuthScreen.auth_route_args: (ctx) => AuthScreen(),
       },
     );
