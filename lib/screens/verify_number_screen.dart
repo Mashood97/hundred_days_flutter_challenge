@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hundreddaysflutterchallenge/screens/home_screen.dart';
-import '../widgets/verify_phone_list.dart';
-
+import 'package:hundreddaysflutterchallenge/screens/tabs_home_screen.dart';
+import '../screens/chat_screen.dart';
+import '../widgets/verify_phone_textfiekd.dart';
 class VerifyPhoneNumber extends StatelessWidget {
   static const routeArgs = '/verify-phone-number';
 
@@ -24,26 +24,27 @@ class VerifyPhoneNumber extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: new TextStyle(
                       fontSize: 18.0,
-                      color: Colors.black,
+                      color: Colors.white,
                       fontWeight: FontWeight.w600),
                 ),
                 SizedBox(
                   height: 20,
                 ),
-                verify_phone_listview(),
-                SizedBox(
-                  height: 20,
-                ),
+                VerifyphoneTextfield(),
+                
                 RaisedButton(
-                  splashColor: Colors.deepOrangeAccent,
-                  color: Theme.of(context).primaryColor,
+                  splashColor: Colors.amber,
+                  color: Colors.amber,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                   onPressed: () {
-                    Navigator.of(context)
-                        .pushReplacementNamed(HomeScreen.routeArgs);
+                    Navigator.of(context).pushNamed(TabsHomeScreen.routeArgs);
                   },
                   child: Text(
                     'Verify',
-                    style: Theme.of(context).textTheme.title,
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
                   ),
                 ),
                 SizedBox(
@@ -53,8 +54,13 @@ class VerifyPhoneNumber extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15),
                   ),
-                  splashColor: Theme.of(context).primaryColor,
-                  child: Text('Resend OTP? Click here'),
+                  splashColor: Colors.amber,
+                  child: Text(
+                    'Resend OTP? Click here',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
                   onPressed: () {},
                 ),
               ],

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import './screens/auth_screen.dart';
+import 'package:hundreddaysflutterchallenge/screens/tabs_home_screen.dart';
 import './screens/verify_number_screen.dart';
-import './screens/home_screen.dart';
+import './screens/auth_screen.dart';
+import './screens/chat_screen.dart';
 
 void main() {
   runApp(HomeConfig());
@@ -12,20 +13,22 @@ class HomeConfig extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          primarySwatch: Colors.green,
-          accentColor: Colors.lightGreen,
+          primaryColor: Color(0xFF0B1033),
+          accentColor: Colors.pinkAccent,
+          canvasColor: Colors.black,
+          fontFamily: 'Roboto',
           textTheme: TextTheme(
             title: TextStyle(
               color: Colors.white,
               fontSize: 18,
             ),
-          )),
+          ),),
       initialRoute: '/',
       routes: {
         '/': (ctx) => AuthScreen(),
-        HomeScreen.routeArgs: (ctx) => HomeScreen(),
         VerifyPhoneNumber.routeArgs: (ctx) => VerifyPhoneNumber(),
-//        AuthScreen.auth_route_args: (ctx) => AuthScreen(),
+        ChatScreen.routeArgs: (ctx) => ChatScreen(),
+        TabsHomeScreen.routeArgs: (ctx) => TabsHomeScreen(),
       },
     );
   }
