@@ -20,7 +20,7 @@ class VerifyphoneTextfield extends StatelessWidget {
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
           ),
-          hintText: 'Enter your number',
+          hintText: 'Code e.g: 5894',
           hintStyle: TextStyle(
             color: Colors.white,
             letterSpacing: 2,

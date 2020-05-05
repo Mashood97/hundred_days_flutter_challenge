@@ -93,7 +93,7 @@ class ChatScreen extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: TextField(
-        maxLength: 4,
+       
         keyboardType: TextInputType.text,
         style: TextStyle(
           color: Colors.white,
@@ -123,6 +123,7 @@ class ChatScreen extends StatelessWidget {
   Widget list_messages() {
     return Expanded(
       child: ListView.separated(
+
         itemCount: users_list_messages.length,
         itemBuilder: (ctx, i) => ChatListTile(
           username: users_list_messages[i]['username'],

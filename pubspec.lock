@@ -83,13 +83,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  flutter_plugin_android_lifecycle:
-    dependency: transitive
+  flutter_slidable:
+    dependency: "direct main"
     description:
-      name: flutter_plugin_android_lifecycle
+      name: flutter_slidable
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.7"
+    version: "0.4.9"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -102,20 +102,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.4"
-  image_picker:
-    dependency: "direct main"
-    description:
-      name: image_picker
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.6.5+3"
-  intl:
-    dependency: "direct main"
-    description:
-      name: intl
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.16.1"
   matcher:
     dependency: transitive
     description:
@@ -165,13 +151,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.4.0"
-  pin_input_text_field:
-    dependency: "direct main"
-    description:
-      name: pin_input_text_field
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.0.1"
   quiver:
     dependency: transitive
     description:
@@ -248,5 +227,5 @@ packages:
     source: hosted
     version: "3.5.0"
 sdks:
-  dart: ">=2.7.0 <3.0.0"
-  flutter: ">=1.12.13 <2.0.0"
+  dart: ">=2.4.0 <3.0.0"
+  flutter: ">=0.3.6 <2.0.0"

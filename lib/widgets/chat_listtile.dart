@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
 
 class ChatListTile extends StatelessWidget {
   final username;
@@ -7,12 +8,10 @@ class ChatListTile extends StatelessWidget {
   final isNew;
   final day;
   ChatListTile({this.username, this.image, this.isNew, this.message, this.day});
-  @override
-  Widget build(BuildContext context) {
-    return Dismissible(
-      direction: DismissDirection.endToStart,
-      key: UniqueKey(),
-      child: ListTile(
+
+
+  Widget listtileView(BuildContext context){
+    return ListTile(
         leading: GestureDetector(
           onTap: () {
             showDialog(
@@ -78,7 +77,37 @@ class ChatListTile extends StatelessWidget {
                 day,
                 style: TextStyle(color: Colors.white, fontSize: 15),
               ),
-      ),
+      );
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Slidable(
+      delegate: SlidableStrechDelegate(),
+      actions: <Widget>[
+        CircleAvatar(
+          child: Icon(
+            Icons.edit,
+            color: Colors.white,
+          ),
+          backgroundColor: Colors.green,
+        ),
+        CircleAvatar(
+          child: Icon(
+            Icons.call,
+            color: Colors.white,
+          ),
+          backgroundColor: Colors.pinkAccent,
+        ),
+        CircleAvatar(
+          child: Icon(
+            Icons.video_call,
+            color: Colors.white,
+          ),
+          backgroundColor: Colors.amberAccent,
+        ),
+      ],
+      actionExtentRatio: 0.15,
+      child: listtileView(context),
     );
   }
 }
